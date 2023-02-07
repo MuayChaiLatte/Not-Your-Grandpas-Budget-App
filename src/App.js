@@ -16,13 +16,15 @@ function InputValue({ valueType }) {
   )
 }
 
-function TotalMonthlyIncome() {
+function CalculatedValue({ valueType, value }) {
   return (
     <div>
-      <p></p>
+      <h2>{valueType}</h2>
+      <p>{value}</p>
     </div>
   )
 }
+
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Heading />
       <InputValue valueType="Total Monthly Income"/>
       <InputValue valueType="Total Monthly Outgoings"/>
+      <CalculatedValue valueType="Net Monthly Income"/>
+      <CalculatedValue valueType="Weekly Allowance"/>
     </>
   );
 }
